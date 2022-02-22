@@ -1,20 +1,45 @@
+:root {
+  --colorError: rgb(255, 0, 0);
+  --colorWhite: #ffffff;
+  --colorText: #000000;
+  --colorHeaderBg: #a6cbde;
+  --colorFooterbg: #222a2e;
+  --colorResetBtn: #a2a3a4;
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 body {
-  padding: 0px;
-  margin: 0px;
-  font-family: Montserrat;
+  font-size: 1.6rem;
+}
+.header {
+  background-color: var(--colorHeaderBg);
+  padding: 3rem 0;
 }
 .container {
   width: 100vw;
-  height: 100vh;
-  margin: 0px;
+  min-height: 100vh;
 }
-.header {
-  background-color: #a6cbde;
-  height: 130px;
+.main {
+  flex-grow: 1;
+  /* align-items: flex-start; */
+}
+.form {
+  width: 100%;
+  margin-bottom: 3rem;
+  /* min-width: 70%; */
+  max-width: 100rem;
+  padding: 0 1rem;
 }
 .row {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .column {
   display: flex;
@@ -25,116 +50,134 @@ body {
   align-items: center;
   justify-content: center;
 }
-.body {
-  flex-grow: 1;
-  align-items: flex-start;
-}
 .footer {
   background-color: #222a2e;
-  height: 60px;
-  color: #ffffff;
-}
-.form {
-  width: 100%;
-  padding: 10px 201px;
-}
-p {
-  color: #000000;
-  font-size: 45px;
+  padding: 2rem 0;
+  color: var(--colorWhite);
+  font-family: "Montserrat", sans-serif;
+  /* font-size: 1.6rem; */
   font-style: normal;
   font-weight: 700;
-  line-height: 55px;
-  letter-spacing: 0em;
-  text-align: left;
+  line-height: 2rem;
+}
+.title {
+  color: var(--colorText);
+  font-size: 4.5rem;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 5.5rem;
+  margin-bottom: 4rem;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  align-self: flex-start;
+  width: 40%;
 }
 .field {
   border: none;
-  border-bottom: 1px solid #000000;
-  text-decoration: none;
-  margin: 15px 0px;
+  border-bottom: 0.1rem solid var(--colorText);
+  padding: 0 1rem;
 }
-input {
-  width: 400px;
-  height: 50px;
+.input-field {
+  height: 5rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
-textarea {
-  text-decoration: none;
+.textarea-field {
   resize: none;
 }
-textarea:focus,
-input:focus {
+.textarea-field:focus,
+.input-field:focus {
   outline: none;
   background-color: none;
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 30px white inset !important;
+.input-field:-webkit-autofill,
+.input-field:-webkit-autofill:hover,
+.input-field:-webkit-autofill:focus,
+.input-field:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 3rem var(--colorWhite) inset !important;
+}
+.input-field::-webkit-outer-spin-button,
+.input-field::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-field[type="number"] {
+  -moz-appearance: textfield;
 }
 ::placeholder {
-  font-family: Montserrat;
-  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
   font-style: normal;
-  color: #000000;
+  color: var(--colorText);
 }
 .text {
-  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
   font-style: normal;
+  font-weight: 400;
 }
-button {
-  height: 55px;
-  width: 131px;
-  margin: 0px 30px;
-  margin-top: 50px;
-  border-radius: 0px;
-  color: #ffffff;
+.button {
+  height: 5.5rem;
+  width: 13.1rem;
+  margin: 0 3rem;
+  margin-top: 5rem;
+  color: var(--colorWhite);
   border: none;
+  font-size: 2rem;
+  font-weight: 700;
 }
-button:hover,
-button:focus {
-  background-color: #000000;
+.button:hover,
+.button:focus {
+  background-color: var(--colorText);
 }
 .reset-button {
-  background-color: #a2a3a4;
+  background-color: var(--colorResetBtn);
 }
 .send-button {
-  background-color: #a6cbde;
+  background-color: var(--colorHeaderBg);
 }
-.red-color {
-  border-color: red;
+.input-error {
+  border-color: var(--colorError);
 }
-.red-color::-webkit-input-placeholder {
-  color: red;
+.input-error::-webkit-input-placeholder {
+  color: var(--colorError);
+  font-size: 1.6rem;
 }
 .error {
   display: none;
-  color: red;
+  color: var(--colorError);
+  font-size: 1.6rem;
+  font-weight: 300;
+  width: 80%;
+  flex-grow: 1;
 }
 
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 768px) {
   .row {
     flex-direction: column;
   }
   .container {
-    width: 100vw;
     height: 100%;
-    margin: 0px;
-  }
-  .form {
-    padding: 0px;
+    margin: 0;
   }
   .body {
-    margin: 0px 10px;
+    margin: 0;
   }
-  input {
+  .input-field {
+    flex-grow: 1;
+  }
+  .input-container {
+    margin-bottom: 3rem;
     width: 100%;
   }
-  .button-container {
-    margin-bottom: 30px;
-  }
-  button {
-    margin: 0px 20px;
-    margin-top: 30px;
+  .button {
+    margin: 0 2rem;
+    margin-top: 3rem;
   }
 }
