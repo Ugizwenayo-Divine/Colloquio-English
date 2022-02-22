@@ -1,0 +1,140 @@
+body {
+  padding: 0px;
+  margin: 0px;
+  font-family: Montserrat;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0px;
+}
+.header {
+  background-color: #a6cbde;
+  height: 130px;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.body {
+  flex-grow: 1;
+  align-items: flex-start;
+}
+.footer {
+  background-color: #222a2e;
+  height: 60px;
+  color: #ffffff;
+}
+.form {
+  width: 100%;
+  padding: 10px 201px;
+}
+p {
+  color: #000000;
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 55px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.field {
+  border: none;
+  border-bottom: 1px solid #000000;
+  text-decoration: none;
+  margin: 15px 0px;
+}
+input {
+  width: 400px;
+  height: 50px;
+}
+textarea {
+  text-decoration: none;
+  resize: none;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+  background-color: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+::placeholder {
+  font-family: Montserrat;
+  font-size: 24px;
+  font-style: normal;
+  color: #000000;
+}
+.text {
+  font-size: 24px;
+  font-style: normal;
+}
+button {
+  height: 55px;
+  width: 131px;
+  margin: 0px 30px;
+  margin-top: 50px;
+  border-radius: 0px;
+  color: #ffffff;
+  border: none;
+}
+button:hover,
+button:focus {
+  background-color: #000000;
+}
+.reset-button {
+  background-color: #a2a3a4;
+}
+.send-button {
+  background-color: #a6cbde;
+}
+.red-color {
+  border-color: red;
+}
+.red-color::-webkit-input-placeholder {
+  color: red;
+}
+.error {
+  display: none;
+  color: red;
+}
+
+@media screen and (max-width: 678px) {
+  .row {
+    flex-direction: column;
+  }
+  .container {
+    width: 100vw;
+    height: 100%;
+    margin: 0px;
+  }
+  .form {
+    padding: 0px;
+  }
+  .body {
+    margin: 0px 10px;
+  }
+  input {
+    width: 100%;
+  }
+  .button-container {
+    margin-bottom: 30px;
+  }
+  button {
+    margin: 0px 20px;
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container column">
+      <header class="header center">
+        <img src="./img/codeland.png" alt="" />
+      </header>
+      <div class="body center">
+        <div class="form">
+          <div>
+            <p>Contact us!</p>
+          </div>
+          <div class="row">
+            <div>
+              <input
+                type="text"
+                placeholder="Name"
+                class="field text"
+                id="name"
+                name="name"
+                onkeydown="clearField(this)"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                placeholder="Email"
+                class="field text"
+                id="email"
+                name="email"
+                onchange="onChange(this)"
+                onkeydown="clearField(this)"
+              />
+              <div id="email-error" class="text error">
+                Provide a valid email
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <input
+                type="text"
+                placeholder="Phone"
+                class="field text"
+                id="phone"
+                name="phone"
+                onchange="onChange(this)"
+                onkeydown="clearField(this)"
+              />
+              <div id="phone-error" class="text error">
+                Provide a valid phone
+              </div>
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Company"
+                class="field text"
+                id="company"
+                name="company"
+                onkeydown="clearField(this)"
+              />
+            </div>
+          </div>
+          <div class="column">
+            <textarea
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Your Message"
+              class="field text"
+              onkeydown="clearField(this)"
+            ></textarea>
+          </div>
+          <div class="button-container center">
+            <button
+              class="send-button"
+              type="button"
+              id="send-btn"
+              onclick="submit();"
+            >
+              Send
+            </button>
+            <button
+              class="reset-button"
+              type="button"
+              id="reset-btn"
+              onclick="reset();"
+            >
+              Reset
+            </button>
+          </div>
+        </div>
+      </div>
+      <footer class="footer center">&copy; CODELAND 2020</footer>
+    </div>
+  </body>
+</html>
